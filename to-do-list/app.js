@@ -1,5 +1,6 @@
 //importando o express
 const express = require('express');
+//O nodemon é um servidor de desenvolvimento, para fazer testes e tal, iniciamos ele com npx nodemon ou nodemon
 const nodemon = require('nodemon')
 //colocando a função dentro de uma variavel
 const app = express();
