@@ -14,5 +14,13 @@ router.get('/:id',(req, res)=>{
     console.log(req.params.id)
     res.send(`id: ${req.params.id}`)
 })
+router.put('/:id',(req, res)=>{
+    console.log(req.params.id)
+    res.send(`put id: ${req.params.id}`)
+})
+router.delete('/:id',(req, res)=>{
+    console.log(req.params.id)
+    res.send(`delete id: ${req.params.id}`)
+})
 //exportando a função
 module.exports = router;
