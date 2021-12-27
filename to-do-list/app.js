@@ -1,9 +1,11 @@
 //importando o express
 const express = require('express');
+require('./config/database')
 //importando a função
 const checkListRouter = require('./src/routes/checklist')
 //O nodemon é um servidor de desenvolvimento, para fazer testes e tal, iniciamos ele com npx nodemon ou nodemon
 const nodemon = require('nodemon');
+const req = require('express/lib/request');
 //colocando a função dentro de uma variavel
 const app = express();
 //O express.json é utilizado para que o servidor consiga receber e tratar dados no formato json
