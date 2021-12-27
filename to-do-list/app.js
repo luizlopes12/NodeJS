@@ -13,6 +13,7 @@ const req = require('express/lib/request');
 const app = express();
 //O express.json é utilizado para que o servidor consiga receber e tratar dados no formato json
 app.use(express.json());
+app.use(express.static(path.join(__dirname, 'public')))
 app.set('views', path.join(__dirname, 'src/views'))
 app.set('view engine', 'ejs')
 app.use('/', rootRouter);
