@@ -1,5 +1,6 @@
 //importando o express
 const express = require('express');
+const path = require('path')
 require('./config/database')
 //importando a função
 const checkListRouter = require('./src/routes/checklist')
@@ -10,6 +11,8 @@ const req = require('express/lib/request');
 const app = express();
 //O express.json é utilizado para que o servidor consiga receber e tratar dados no formato json
 app.use(express.json());
+app.set('views', path.join(__dirname, 'src/views'))
+app.set('view engine', 'ejs')
 app.use('/checklists', checkListRouter);
 //Mostrando que o servidor já iniciou e está funcionando na porta 3000
 app.listen(3000, () =>{
